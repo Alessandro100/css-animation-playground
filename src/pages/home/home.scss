@@ -1,0 +1,75 @@
+page-home {
+
+    ion-content{
+        background-color: #18B5B8 !important;
+    }
+
+    //Only looks good on nexus 6p screen size --> make it more robust
+
+    //main variables
+    $outter-size: 12rem;
+    $move-distance: -200px;
+
+    $inner-size: $outter-size*4/5;
+    $circle-size: $outter-size/4.5;
+
+    #circle-placement{//this changes depending on the travel distance and starting point of the circles
+        position: absolute;
+        top: 63px;
+        right: 4px;
+        z-index: 5;
+    }
+
+    .circle{
+        background-color: #18B5B8;//fades into another
+        width: $circle-size;
+        height: $circle-size;
+        border-radius: $circle-size;
+        margin: $outter-size/30 0 $outter-size/30 0;
+    }
+    .c1{
+
+    }
+    .c2{
+        margin-left: -1*$circle-size;
+    }
+    .c3{
+        margin-left: -2*$circle-size;
+    }
+
+    #outter-square{
+        position: relative;
+        background-color: white;
+        width: $outter-size;
+        height: $outter-size;
+        border-radius: $outter-size/4;
+        margin-left: 17px;//helps with positioning
+    }
+
+    #inner-square{  
+        background-color: #18B5B8;
+        width: $inner-size;
+        height: $inner-size;
+        border-radius: $inner-size/4;//4.5
+        z-index: 3;
+        position: absolute;
+        left:50%;
+        top:50%;
+        margin-top: $inner-size*-1/2;
+        margin-left: $inner-size*-1/2;
+    }
+
+    .text{
+        position: absolute;
+        font-size: 12rem;
+        color: white;
+        right: 5px;
+        top: 50px;
+        opacity: 0;
+        transition: 0.75s ease-in-out all;
+    }
+
+    .show{
+        opacity: 1;
+    }
+}
